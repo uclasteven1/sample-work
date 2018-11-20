@@ -1,0 +1,12 @@
+    body {
+        background-color: #DDD;
+        padding: 10px;
+    }
+    h3 {
+        text-align: center;
+        margin: 10px auto;
+        font-family: 'Pacifico';
+        border-bottom: 1px solid gray;
+        width: 50%;
+    }
+    
