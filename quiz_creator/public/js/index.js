@@ -1,12 +1,7 @@
 $(function(){
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyCaOcA94KrX6O4lQp4rPSVcmFMG6jtOEKc",
-      authDomain: "my-band-project-072018.firebaseapp.com",
-      databaseURL: "https://my-band-project-072018.firebaseio.com",
-      projectId: "my-band-project-072018",
-      storageBucket: "my-band-project-072018.appspot.com",
-      messagingSenderId: "873667899882"
+      
     };
     firebase.initializeApp(config);
 
