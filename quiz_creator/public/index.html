@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Create Quiz | Week 5</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Internal CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid mt-3">
+    <div class="row mb-3">
+        <div class="col-6">
+            <h1>
+                Create Quiz
+            </h1>
+        </div>
+        <div class="col-6">
+            <button id="showQuizCreator" class="btn btn-primary float-right" data-show=true><i class="fa fa-plus"></i></button>
+        </div>
+        <div class="col-12 text-right">
+            <form id="formCreateQuiz" class="bg-dark rounded p-3 text-right">
+              <div class="form-row">
+                <!-- Title -->
+                <div class="form-group col-6">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-pencil-alt"></i></div>
+                    </div>
+                    <input id="quizTitle" type="text" class="form-control" placeholder="Title">
+                  </div>
+                </div>
+
+                <!-- Category -->
+                <div class="form-group col-6">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-chalkboard-teacher"></i></div>
+                    </div>
+                    <input id="quizCategory" type="text" class="form-control" placeholder="Category">
+                  </div>
+                </div>
+              </div>
+
+                <!-- Question 1 -->
+                <div class="form-group" id="question1">
+                  <label for="question1Text" class="col-12 text-left text-white mb-2">Question 1</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-question"></i>
+                      </div>
+                    </div>
+                    <textarea id="question1Text" class="form-control" aria-label="With textarea" rows=3 placeholder="Type question here..."></textarea>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question1Option1" type="text" class="form-control" placeholder="Option 1">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="0" name="answer1" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question1Option2" type="text" class="form-control" placeholder="Option 2">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="1" name="answer1" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question1Option3" type="text" class="form-control" placeholder="Option 3">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="2" name="answer1" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question1Option4" type="text" class="form-control" placeholder="Option 4">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="3" name="answer1" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="form-group" id="question2">
+                  <label for="question2Text" class="col-12 text-left text-white mb-2">Question 2</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-question"></i>
+                      </div>
+                    </div>
+                    <textarea id="question2Text" class="form-control" aria-label="With textarea" rows=3 placeholder="Type question here..."></textarea>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question2Option1" type="text" class="form-control" placeholder="Option 1">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="0" name="answer2" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question2Option2" type="text" class="form-control" placeholder="Option 2">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="1" name="answer2" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question2Option3" type="text" class="form-control" placeholder="Option 3">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="2" name="answer2" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question2Option4" type="text" class="form-control" placeholder="Option 4">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="3" name="answer2" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="form-group" id="question3">
+                  <label for="question3Text" class="col-12 text-left text-white mb-2">Question 3</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-question"></i>
+                      </div>
+                    </div>
+                    <textarea id="question3Text" class="form-control" aria-label="With textarea" rows=3 placeholder="Type question here..."></textarea>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question3Option1" type="text" class="form-control" placeholder="Option 1">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="0" name="answer3" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question3Option2" type="text" class="form-control" placeholder="Option 2">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="1" name="answer3" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question3Option3" type="text" class="form-control" placeholder="Option 3">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="2" name="answer3" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question3Option4" type="text" class="form-control" placeholder="Option 4">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="3" name="answer3" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="form-group" id="question4">
+                  <label for="question4Text" class="col-12 text-left text-white mb-2">Question 4</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-question"></i>
+                      </div>
+                    </div>
+                    <textarea id="question4Text" class="form-control" aria-label="With textarea" rows=3 placeholder="Type question here..."></textarea>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question4Option1" type="text" class="form-control" placeholder="Option 1">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="0" name="answer4" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question4Option2" type="text" class="form-control" placeholder="Option 2">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="1" name="answer4" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question4Option3" type="text" class="form-control" placeholder="Option 3">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="2" name="answer4" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-check"></i></div>
+                    </div>
+                    <input id="question4Option4" type="text" class="form-control" placeholder="Option 4">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <input type="radio" value="3" name="answer4" aria-label="Correct?">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <button id="create" class="btn btn-success">Create</button>
+                <button id="update" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+      <div id="quiz" class="col-12 card-deck">
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+</html>
