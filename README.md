@@ -4,6 +4,7 @@
 <ul>
   <li>"What Kind of Day Will You Have?" Generator</li>
   <li>Harvard Art Museum - Painting Archive Search</li>
+  <li>Quiz Creator - Multiple Choice Generator</li>
 </ul>
 <hr>
 # sample-work
