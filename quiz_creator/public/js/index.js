@@ -1,7 +1,11 @@
 $(function(){
     // Initialize Firebase
     var config = {
+      /*****
       
+      <Your API Key Here> 
+      
+      *****/
     };
     firebase.initializeApp(config);
 
