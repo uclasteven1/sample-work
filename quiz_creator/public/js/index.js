@@ -3,9 +3,10 @@ $(function(){
     var config = {
       /*****
       
-      <Your API Key Here> 
+      Add your API key below
       
       *****/
+      apiKey: "<API_KEY>"
     };
     firebase.initializeApp(config);
 
